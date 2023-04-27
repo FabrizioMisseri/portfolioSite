@@ -21,6 +21,8 @@ export default {
 }
 </script>
 
-<template></template>
+<template>
+    <img src="../assets/img/logoFM.png" alt="">
+</template>
 
 <style lang="scss" scoped></style>
