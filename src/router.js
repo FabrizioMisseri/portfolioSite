@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomePage from "./pages/HomePage.vue";
-import SecondPage from "./pages/SecondPage.vue";
+import Contacts from "./pages/Contacts.vue";
 import NotFound from "./pages/NotFound.vue";
 
 const router = createRouter({
@@ -13,9 +13,9 @@ const router = createRouter({
             component: HomePage,
         },
         {
-            path: '/second',
-            name: 'second',
-            component: SecondPage,
+            path: '/contacts',
+            name: 'contacts',
+            component: Contacts,
         },
         {
             path: "/:pathMatch(.*)*",

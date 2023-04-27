@@ -1,8 +1,12 @@
 <script>
 import { store } from '../store';
+import Navbar from '../components/Navbar.vue';
 
 export default {
     name: 'HomePage',
+    components: {
+        Navbar,
+    },
 
     data() {
         return {
@@ -22,7 +26,7 @@ export default {
 </script>
 
 <template>
-    <img src="../assets/img/logoFM.png" alt="">
+    <Navbar></Navbar>
 </template>
 
 <style lang="scss" scoped></style>
