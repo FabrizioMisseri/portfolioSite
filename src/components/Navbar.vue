@@ -5,6 +5,8 @@ export default {
 </script>
 
 <template>
+    <div id="fakeMarginTop"></div>
+
     <nav class="navbar navbar-expand-lg mb-3 px-4">
         <div class="container-fluid d-flex align-items-start">
             <RouterLink class="navbar-brand" :to="{ name: 'home' }">
@@ -37,7 +39,24 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-#logo {
-    max-width: 250px;
+#fakeMarginTop {
+    padding: 45px;
+}
+
+nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    background-color: white;
+
+    ul {
+        font-size: 1.5rem;
+    }
+
+    #logo {
+        width: 120px;
+    }
 }
 </style>
