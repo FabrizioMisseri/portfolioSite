@@ -47,10 +47,13 @@ export default {
 <template>
     <Navbar></Navbar>
 
+    <!-- debug -->
+    <h2 class="py-5">WORK IN PROGRESS ...</h2>
+
     <!-- body wrapper -->
     <section class="container">
         <!-- SLIDER -->
-        <swiper class="my_swiper" :slides-per-view="2" :space-between="50" @swiper="onSwiper" @slideChange="onSlideChange">
+        <swiper :slides-per-view="2" :space-between="50" @swiper="onSwiper" @slideChange="onSlideChange">
             <!-- boolking -->
             <swiper-slide>
                 <a href="#">
