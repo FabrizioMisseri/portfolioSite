@@ -28,10 +28,11 @@ export default {
                             :class="(this.$route.name == 'contacts') ? 'active' : 'not-active'">
                             Contacts</RouterLink>
                     </li>
-                    <!-- <li class="nav-item" v-for="(element, index) in array" :key="index"
-                    v-show="this.$route.name == 'element'">
-                        {{element}}
-                    </li> -->
+                    <li class="nav-item">
+                        <RouterLink class="nav-link" :to="{ name: 'projects' }"
+                            :class="(this.$route.name == 'projects') ? 'active' : 'not-active'">
+                            Projects</RouterLink>
+                    </li>
                 </ul>
             </div>
         </div>
