@@ -40,7 +40,6 @@ export default {
     },
 
     methods: {
-
     }
 }
 </script>
@@ -51,24 +50,18 @@ export default {
     <!-- body wrapper -->
     <section class="container">
         <!-- SLIDER -->
-        <swiper :slides-per-view="3" :space-between="50" @swiper="onSwiper" @slideChange="onSlideChange">
+        <swiper class="my_swiper" :slides-per-view="2" :space-between="50" @swiper="onSwiper" @slideChange="onSlideChange">
             <!-- boolking -->
             <swiper-slide>
-                <!-- <div class="debug"></div> -->
-                <img src="../assets/img/boolking/1.png" alt="">
-            </swiper-slide>
-            <swiper-slide>
-                <img src="../assets/img/boolking/2.png" alt="">
+                <a href="#">
+                    <img src="../assets/img/boolking/2.png" alt="">
+                </a>
             </swiper-slide>
             <!-- fotoalbum -->
             <swiper-slide>
-                <img src="../assets/img/fotoalbum/1.png" alt="">
-            </swiper-slide>
-            <swiper-slide>
-                <img src="../assets/img/fotoalbum/2.png" alt="">
-            </swiper-slide>
-            <swiper-slide>
-                <img src="../assets/img/fotoalbum/3.png" alt="">
+                <a href="#">
+                    <img src="../assets/img/fotoalbum/1.png" alt="">
+                </a>
             </swiper-slide>
 
         </swiper>
@@ -78,11 +71,4 @@ export default {
     <!-- / body wrapper -->
 </template>
 
-<style lang="scss" scoped>
-.debug {
-    display: inline-block;
-    height: 300px;
-    background-color: red;
-    width: 300px;
-}
-</style>
+<style lang="scss" scoped></style>
