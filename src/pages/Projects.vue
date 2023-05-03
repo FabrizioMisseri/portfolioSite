@@ -2,6 +2,9 @@
 // import slider
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
+import { Pagination, Scrollbar } from 'swiper';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 // -------------
 import { store } from '../store';
 import Navbar from '../components/Navbar.vue';
@@ -21,11 +24,13 @@ export default {
         };
     },
     // -------------
+
     name: 'Projects',
     components: {
         Navbar,
         Swiper,
         SwiperSlide,
+        modules: [Pagination, Scrollbar],
     },
 
     data() {
@@ -54,7 +59,8 @@ export default {
     <!-- body wrapper -->
     <section class="container">
         <!-- SLIDER -->
-        <swiper :slides-per-view="2" :space-between="50" @swiper="onSwiper" @slideChange="onSlideChange">
+        <swiper :modules="modules" :slides-per-view="1" :space-between="0" :pagination="true"
+            :scrollbar="{ draggable: true }" @swiper="onSwiper" @slideChange="onSlideChange" :loop="true">
 
             <!-- boolking -->
             <swiper-slide>
@@ -81,4 +87,15 @@ export default {
     <!-- / body wrapper -->
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@use "../styles/partials/variables" as *;
+
+.swiper .swiper-wrapper {
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+        color: $ironColor;
+        cursor: none;
+    }
+}
+</style>

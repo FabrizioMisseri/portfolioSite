@@ -7,27 +7,27 @@ export default {
 <template>
     <div id="fakeMarginTop"></div>
 
-    <nav class="navbar navbar-expand-lg mb-3 px-4">
-        <div class="container-fluid d-flex align-items-start">
-            <RouterLink class="navbar-brand" :to="{ name: 'home' }">
+    <nav class="mb-3 px-4">
+        <div class="container-fluid d-flex align-items-start justify-content-between">
+            <RouterLink :to="{ name: 'home' }">
                 <img src="../assets/img/logoFM.png" alt="" id="logo">
             </RouterLink>
 
             <div>
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <RouterLink class="nav-link" :to="{ name: 'home' }"
-                            :class="(this.$route.name == 'home') ? 'active' : 'not-active'">
+                <ul class="ms-auto mb-2">
+                    <li>
+                        <RouterLink :to="{ name: 'home' }"
+                            :class="(this.$route.name == 'home') ? 'my_active' : 'my_not-active'">
                             Home</RouterLink>
                     </li>
-                    <li class="nav-item">
-                        <RouterLink class="nav-link" :to="{ name: 'contacts' }"
-                            :class="(this.$route.name == 'contacts') ? 'active' : 'not-active'">
+                    <li>
+                        <RouterLink :to="{ name: 'contacts' }"
+                            :class="(this.$route.name == 'contacts') ? 'my_active' : 'my_not-active'">
                             Contacts</RouterLink>
                     </li>
-                    <li class="nav-item">
-                        <RouterLink class="nav-link" :to="{ name: 'projects' }"
-                            :class="(this.$route.name == 'projects') ? 'active' : 'not-active'">
+                    <li>
+                        <RouterLink :to="{ name: 'projects' }"
+                            :class="(this.$route.name == 'projects') ? 'my_active' : 'my_not-active'">
                             Projects</RouterLink>
                     </li>
                 </ul>
@@ -37,6 +37,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@import "../styles/partials/variables";
+
 #fakeMarginTop {
     padding: 45px;
 }
@@ -51,6 +53,22 @@ nav {
 
     ul {
         font-size: 1.5rem;
+        list-style: none;
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        li {
+            .my_active {
+                color: black
+            }
+
+            .my_not-active {
+                color: $ironColor;
+            }
+        }
     }
 
     #logo {
