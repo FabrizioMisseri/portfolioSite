@@ -26,6 +26,7 @@ export default {
     <!-- debug -->
     <h2 class="py-5">WORK IN PROGRESS ...</h2>
     <!-- / debug -->
+    <!-- @click => window.open('mailto:test@gmail.com') -->
 </template>
 
 <style lang="scss" scoped></style>

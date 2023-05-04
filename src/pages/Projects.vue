@@ -45,7 +45,7 @@ export default {
 
     methods: {
         getImage(path) {
-            return new URL(`../assets/img/${path}`, import.meta.url).href;
+            return new URL(this.store.basePathString + path, import.meta.url).href;
         }
     }
 }
