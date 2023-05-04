@@ -40,10 +40,13 @@ export default {
     },
 
     created() {
-
+        console.log(this.store.photos);
     },
 
     methods: {
+        getImage(path) {
+            return new URL(`${this.store.basePathString}${path}`, import.meta.url).href;
+        }
     }
 }
 </script>
@@ -63,7 +66,7 @@ export default {
 
             <!-- all photos debug -->
             <swiper-slide v-for="(photo, index) in store.photos" :key="index">
-                <img :src="`../assets/img/${photo}`" alt="">
+                <img :src="getImage(photo)" alt="">
             </swiper-slide>
             <!-- / all photos debug -->
 
