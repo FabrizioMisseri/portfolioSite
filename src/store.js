@@ -3,7 +3,7 @@ import { reactive } from "vue";
 
 export const store = reactive({
 
-    basePathString: "../assets/img/",
+    basePathString: "/assets/img/",
 
     photos: [
         "boolking/2.png",
