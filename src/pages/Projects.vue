@@ -40,7 +40,7 @@ export default {
                 "fotoalbum/2.png",
                 "fotoalbum/3.png",
             ],
-            basePathString: "../assets/img/",
+            basePathString: "/assets/img/",
 
         }
     },
@@ -71,6 +71,7 @@ export default {
                 <img :src="getImage(photo)" alt="">
             </swiper-slide>
             <!-- / all photos debug -->
+            <img src="" alt="">
 
         </swiper>
         <!-- / SLIDER -->
