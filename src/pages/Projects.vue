@@ -57,7 +57,7 @@ export default {
     <Navbar></Navbar>
 
     <!-- debug -->
-    <h2 class="py-5">WORK IN PROGRESS ...</h2>
+    <h2 class="py-5">WORK IN PROGRESS ...ciao</h2>
     <!-- / debug -->
 
     <!-- body wrapper -->

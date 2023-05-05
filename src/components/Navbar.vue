@@ -14,7 +14,7 @@ export default {
             </RouterLink>
 
             <div>
-                <ul class="ms-auto mb-2">
+                <ul class="ms-auto d-flex">
                     <li>
                         <RouterLink :to="{ name: 'home' }"
                             :class="(this.$route.name == 'home') ? 'my_active' : 'my_not-active'">
@@ -61,6 +61,8 @@ nav {
         }
 
         li {
+            padding: 0 1rem;
+
             .my_active {
                 color: black
             }
