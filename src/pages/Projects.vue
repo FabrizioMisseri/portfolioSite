@@ -1,5 +1,4 @@
 <script>
-import { store } from '../store';
 import Navbar from '../components/Navbar.vue';
 // import slider
 import { Swiper, SwiperSlide } from 'swiper/vue';
@@ -34,18 +33,21 @@ export default {
 
     data() {
         return {
-            store,
+            photos: [
+                "boolking/2.png",
+                "boolking/1.png",
+                "fotoalbum/1.png",
+                "fotoalbum/2.png",
+                "fotoalbum/3.png",
+            ],
+            basePathString: "../assets/img/",
 
         }
     },
 
-    created() {
-        console.log(this.store.photos);
-    },
-
     methods: {
         getImage(path) {
-            return new URL(this.store.basePathString + path, import.meta.url).href;
+            return new URL(this.basePathString + path, import.meta.url).href;
         }
     }
 }
@@ -65,7 +67,7 @@ export default {
             @slideChange="onSlideChange" :loop="true">
 
             <!-- all photos debug -->
-            <swiper-slide v-for="(photo, index) in store.photos" :key="index">
+            <swiper-slide v-for="(photo, index) in photos" :key="index">
                 <img :src="getImage(photo)" alt="">
             </swiper-slide>
             <!-- / all photos debug -->
