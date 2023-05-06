@@ -5,9 +5,9 @@ export default {
 </script>
 
 <template>
-    <div id="fakeMarginTop"></div>
+    <div id="fakeMarginTop" class="py-5"></div>
 
-    <nav class="mb-3 px-4">
+    <nav class="mb-3 px-4 py-2">
         <div class="container-fluid d-flex align-items-start justify-content-between">
             <RouterLink :to="{ name: 'home' }">
                 <img src="/assets/img/logoFM.png" alt="" id="logo">
@@ -38,10 +38,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "../styles/partials/variables";
-
-#fakeMarginTop {
-    padding: 45px;
-}
 
 nav {
     position: fixed;
