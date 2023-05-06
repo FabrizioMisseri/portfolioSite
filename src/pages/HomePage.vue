@@ -29,19 +29,24 @@ export default {
 <template>
     <Navbar></Navbar>
 
-    <!-- debug -->
-    <h2 class="py-5">WORK IN PROGRESS ...</h2>
-    <!-- / debug -->
-
     <!-- body wrapper -->
     <section class="wrapper py-5">
 
         <!-- SKILLS -->
-        <SingleSkill v-for="(skill, index) in store.logosArray" :key="index" :skill="skill"></SingleSkill>
+        <div class="container">
+            <div class="row">
+                <SingleSkill class="col-3" v-for="(skill, index) in store.logosArray" :key="index" :skill="skill">
+                </SingleSkill>
+            </div>
+        </div>
         <!-- /SKILLS -->
 
     </section>
     <!-- / body wrapper -->
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+.container {
+    width: 80%;
+}
+</style>
