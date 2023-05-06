@@ -1,11 +1,13 @@
 <script>
 import { store } from '../store';
 import Navbar from '../components/Navbar.vue';
+import SingleSkill from '../components/SingleSkill.vue';
 
 export default {
     name: 'HomePage',
     components: {
         Navbar,
+        SingleSkill
     },
 
     data() {
@@ -35,7 +37,7 @@ export default {
     <section class="wrapper py-5">
 
         <!-- SKILLS -->
-
+        <SingleSkill v-for="(skill, index) in store.logosArray" :key="index" :skill="skill"></SingleSkill>
         <!-- /SKILLS -->
 
     </section>

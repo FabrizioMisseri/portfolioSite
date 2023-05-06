@@ -17,7 +17,8 @@ export default {
 
 <template>
     <div>
-
+        <!-- debug -->
+        {{ skill.title }}
     </div>
 </template>
 
