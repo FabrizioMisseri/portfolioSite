@@ -2,12 +2,15 @@
 import { store } from '../store';
 import Navbar from '../components/Navbar.vue';
 import SingleSkill from '../components/SingleSkill.vue';
+//
+import HrBlock from '../components/HrBlock.vue';
 
 export default {
     name: 'HomePage',
     components: {
         Navbar,
-        SingleSkill
+        SingleSkill,
+        HrBlock,
     },
 
     data() {
@@ -32,14 +35,17 @@ export default {
     <!-- body wrapper -->
     <section class="wrapper py-5">
 
-        <!-- SKILLS -->
         <div class="container">
+
+            <!-- SKILLS -->
             <div class="row">
                 <SingleSkill class="col-3" v-for="(skill, index) in store.logosArray" :key="index" :skill="skill">
                 </SingleSkill>
             </div>
+            <HrBlock></HrBlock>
+            <!-- /SKILLS -->
+
         </div>
-        <!-- /SKILLS -->
 
     </section>
     <!-- / body wrapper -->
@@ -48,5 +54,6 @@ export default {
 <style lang="scss">
 .container {
     width: 80%;
+    margin: 0 auto;
 }
 </style>
