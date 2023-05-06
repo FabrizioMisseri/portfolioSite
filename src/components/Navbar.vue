@@ -14,7 +14,7 @@ export default {
             </RouterLink>
 
             <div>
-                <ul class="ms-auto d-flex">
+                <ul class="ms-auto d-flex fs-4">
                     <li>
                         <RouterLink :to="{ name: 'home' }"
                             :class="(this.$route.name == 'home') ? 'my_active' : 'my_not-active'">
@@ -48,7 +48,7 @@ nav {
     background-color: white;
 
     ul {
-        font-size: 1.5rem;
+        // font-size: 1.5rem;
         list-style: none;
 
         a {

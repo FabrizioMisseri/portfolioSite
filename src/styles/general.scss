@@ -1,9 +1,19 @@
 @import 'node_modules/bootstrap/scss/bootstrap';
+@import "node_modules/@fortawesome/fontawesome-free/css/all.css";
+
 
 img {
     max-width: 100%;
 }
 
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
 
 // @import 'partials/variables';

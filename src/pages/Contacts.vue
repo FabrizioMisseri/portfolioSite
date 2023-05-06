@@ -1,9 +1,8 @@
 <script>
-import { store } from '../store';
 import Navbar from '../components/Navbar.vue';
 
 export default {
-    name: 'SecondPage',
+    name: 'Contacts',
 
     components: {
         Navbar,
@@ -11,22 +10,76 @@ export default {
 
     data() {
         return {
-            store,
         }
     },
 
     methods: {
-
-    }
+        sendMail() {
+            window.open('mailto:misserifabrizio@gmail.com');
+        }
+    },
 }
 </script>
 
 <template>
     <Navbar></Navbar>
-    <!-- debug -->
-    <h2 class="py-5">WORK IN PROGRESS ...</h2>
-    <!-- / debug -->
+
     <!-- @click => window.open('mailto:test@gmail.com') -->
+
+    <!-- WRAPPER -->
+    <div class="wrapper py-5 fs-5">
+
+        <!-- LINKS -->
+        <div>
+            <ul>
+                <li>
+                    <a href="https://github.com/FabrizioMisseri">
+                        <span class="me-3 fs-2">
+                            <i class="fa-brands fa-square-github"></i>
+                        </span>
+                        <span>https://github.com/FabrizioMisseri</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/fabrizio-misseri/">
+                        <span class="me-3 fs-2">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </span>
+                        <span>www.linkedin.com/in/fabrizio-misseri</span>
+                    </a>
+                </li>
+                <li>
+                    <div id="mailer" @click="sendMail">
+                        <span class="me-3 fs-2">
+                            <i class="fa-solid fa-envelope"></i>
+                        </span>
+                        <span>misserifabrizio@gmail.com</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- / LINKS -->
+
+    </div>
+    <!-- / WRAPPER -->
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss">
+@use "../styles/partials/variables" as *;
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+
+    a,
+    #mailer {
+        display: inline-block;
+        cursor: pointer;
+
+        &:hover {
+            color: $ironColor;
+        }
+    }
+
+}
+</style>
