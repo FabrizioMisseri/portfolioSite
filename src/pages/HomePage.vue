@@ -32,8 +32,11 @@ export default {
     <!-- / debug -->
 
     <!-- body wrapper -->
-    <section class="container">
+    <section class="wrapper py-5">
 
+        <!-- SKILLS -->
+
+        <!-- /SKILLS -->
 
     </section>
     <!-- / body wrapper -->
