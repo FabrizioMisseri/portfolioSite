@@ -27,10 +27,10 @@ export default {
     <!-- @click => window.open('mailto:test@gmail.com') -->
 
     <!-- WRAPPER -->
-    <div class="wrapper py-5 fs-5">
+    <div class="wrapper py-5 fs-5 d-flex justify-content-center">
 
         <!-- LINKS -->
-        <div>
+        <div class="py-5">
             <ul>
                 <li>
                     <a href="https://github.com/FabrizioMisseri">
@@ -68,7 +68,7 @@ export default {
 @use "../styles/partials/variables" as *;
 
 .wrapper {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
 
     a,
