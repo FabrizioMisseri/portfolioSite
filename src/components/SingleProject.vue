@@ -90,15 +90,17 @@ section {
 
     .swiper-button-next::after,
     .swiper-button-prev::after {
-        display: inline-block;
-        background-color: $ironColor;
-        font-size: 1rem;
-        color: white;
-        width: 50px;
-        height: 25px;
-        line-height: 25px;
-        text-align: center;
-        border-radius: 50%;
+        font-size: 1.5rem;
+        color: $ironColor;
+        font-weight: 600;
+
+        // background-color: $ironColor;
+        // display: inline-block;
+        // width: 50px;
+        // height: 25px;
+        // line-height: 25px;
+        // text-align: center;
+        // border-radius: 50%;
 
         @media screen and (max-width: 360px) {
             display: none;
