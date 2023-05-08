@@ -23,43 +23,43 @@ export default {
 </script>
 
 <template>
-    <div class="item p-5">
-        <figure class="mb-2">
+    <div class="item p-5 d-flex justify-content-center">
+        <figure>
             <img :src="getImage(skill.logoPath)" alt="">
+            <div class="title fs-4">
+                {{ skill.title }}
+            </div>
         </figure>
-        <div class="title fs-4 text-center">
-            {{ skill.title }}
-        </div>
-        <!-- fake div -->
-        <div class="fake-title fs-4">
-            debug
-        </div>
+
     </div>
 </template>
 
 <style lang="scss" scoped>
+@use "../styles/partials/variables" as *;
+
 .item {
 
-    figure,
-    .title {
-        margin: 0 auto;
-        min-width: 100px;
+    figure {
+        position: relative;
+
+        img {
+            width: 125px;
+            filter: grayscale(75%);
+        }
+
+        .title {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            top: 45%;
+            left: 175px;
+            color: $ironColor;
+        }
     }
 
-    .title {
-        display: none;
-    }
-
-    .fake-title {
-        color: white;
-    }
 
     &:hover .title {
         display: block;
-    }
-
-    &:hover .fake-title {
-        display: none;
     }
 }
 </style>

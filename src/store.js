@@ -31,10 +31,6 @@ export const store = reactive({
             logoPath: '/assets/img/logos/logo-html.png',
         },
         {
-            title: 'CSS',
-            logoPath: '/assets/img/logos/logo-css.png',
-        },
-        {
             title: 'BootStrap',
             logoPath: '/assets/img/logos/logo-bootstrap.png',
         },
@@ -69,6 +65,10 @@ export const store = reactive({
         {
             title: 'Spring',
             logoPath: '/assets/img/logos/logo-spring.png',
+        },
+        {
+            title: 'CSS',
+            logoPath: '/assets/img/logos/logo-css.png',
         },
     ],
 });
