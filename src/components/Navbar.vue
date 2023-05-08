@@ -24,7 +24,7 @@ export default {
     <nav class="mb-3 px-4 py-2">
         <div class="container-fluid d-flex align-items-start justify-content-between">
             <RouterLink :to="{ name: 'home' }">
-                <img src="/assets/img/logoFM.png" alt="" id="logo">
+                <img src="/assets/img/logoFMb.png" alt="" id="logo">
             </RouterLink>
 
             <!-- DEFAULT MENU -->
@@ -55,6 +55,9 @@ export default {
                     <i class="fa-solid fa-bars"></i>
                 </span>
                 <ul class="hidden-links" v-if="hiddenLinksFlag">
+                    <li class="text-white">
+                        X
+                    </li>
                     <li>
                         <RouterLink :to="{ name: 'home' }"
                             :class="(this.$route.name == 'home') ? 'my_active' : 'my_not-active'">
@@ -114,7 +117,7 @@ nav {
             }
 
             .my_not-active {
-                color: $ironColor;
+                color: $bg-c;
             }
         }
     }

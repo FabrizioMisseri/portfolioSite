@@ -69,13 +69,31 @@ export default {
 
 .wrapper {
 
-    a,
-    #mailer {
-        display: inline-block;
-        cursor: pointer;
+    // .fa-solid,
+    // .fa-brands {
+    //     color: black;
 
-        &:hover {
-            color: $ironColor;
+    //     &:hover {
+    //         color: $bg-c;
+    //     }
+    // }
+
+    a,
+    #mailer,
+    .fa-solid,
+    .fa-brands {
+        display: inline-block;
+        color: black;
+        cursor: pointer;
+    }
+
+    li:hover {
+
+        a,
+        #mailer,
+        .fa-solid,
+        .fa-brands {
+            color: $bg-c;
         }
     }
 
