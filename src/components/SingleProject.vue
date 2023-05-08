@@ -2,8 +2,10 @@
 // import slider
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
-import { Pagination } from 'swiper';
+import { Pagination, Navigation } from 'swiper';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
 // -------------
 
 export default {
@@ -19,6 +21,7 @@ export default {
         return {
             onSwiper,
             onSlideChange,
+            modules: [Pagination, Navigation],
         };
     },
     // -------------
@@ -28,7 +31,6 @@ export default {
     components: {
         Swiper,
         SwiperSlide,
-        modules: [Pagination],
     },
 
     props: {
@@ -56,8 +58,8 @@ export default {
         <!-- / TITLE -->
 
         <!-- SLIDER -->
-        <swiper class="m-4" :modules="modules" :slides-per-view="1" :space-between="0" :pagination="true" @swiper="onSwiper"
-            @slideChange="onSlideChange" :loop="true">
+        <swiper class="m-4" :modules="modules" :slides-per-view="1" :space-between="0" navigation
+            :pagination="{ clickable: true }" @swiper="onSwiper" @slideChange="onSlideChange" loop="true">
             <!-- all photos -->
             <swiper-slide class="slider" v-for="(photo, index) in project.photos" :key="index">
                 <img :src="getImage(photo)" alt="">
@@ -75,15 +77,32 @@ export default {
     </section>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
+@use "../styles/partials/variables" as *;
+
 section {
     max-width: 90%;
     margin: 0 auto;
 
-    .slider {
+    .swiper-pagination-bullet-active {
+        background-color: $ironColor;
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+        display: inline-block;
+        background-color: $ironColor;
+        font-size: 1rem;
+        color: white;
+        width: 50px;
+        height: 25px;
+        line-height: 25px;
         text-align: center;
+        border-radius: 50%;
 
-
+        @media screen and (max-width: 360px) {
+            display: none;
+        }
     }
 }
 </style>
