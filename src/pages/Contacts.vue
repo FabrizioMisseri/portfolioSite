@@ -68,8 +68,6 @@ export default {
 @use "../styles/partials/variables" as *;
 
 .wrapper {
-    width: 90%;
-    margin: 0 auto;
 
     a,
     #mailer {

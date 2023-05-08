@@ -40,7 +40,8 @@ export default {
             <!-- SKILLS -->
             <h2 class="text-center title">Skills:</h2>
             <div class="row">
-                <SingleSkill class="col-4" v-for="(skill, index) in store.logosArray" :key="index" :skill="skill">
+                <SingleSkill id="skill" class="col-12 col-md-6 col-lg-4" v-for="(skill, index) in store.logosArray"
+                    :key="index" :skill="skill">
                 </SingleSkill>
             </div>
             <!-- /SKILLS -->
@@ -51,6 +52,4 @@ export default {
     <!-- / body wrapper -->
 </template>
 
-<style lang="scss">
-@use "../styles/partials/variables" as *;
-</style>
+<style lang="scss"></style>

@@ -83,9 +83,7 @@ section {
     .slider {
         text-align: center;
 
-        img {
-            max-width: 85%;
-        }
+
     }
 }
 </style>

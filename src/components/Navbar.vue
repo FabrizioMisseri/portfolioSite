@@ -70,7 +70,8 @@ nav {
     }
 
     #logo {
-        width: 120px;
+        min-width: 120px;
+        max-width: 120px;
     }
 }
 </style>

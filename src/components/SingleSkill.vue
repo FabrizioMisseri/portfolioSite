@@ -43,7 +43,8 @@ export default {
         position: relative;
 
         img {
-            width: 125px;
+            min-width: 125px;
+            max-width: 125px;
             filter: grayscale(75%);
         }
 
@@ -52,7 +53,7 @@ export default {
             position: absolute;
             z-index: 1;
             top: 45%;
-            left: 175px;
+            left: 150px;
             color: $ironColor;
         }
     }
