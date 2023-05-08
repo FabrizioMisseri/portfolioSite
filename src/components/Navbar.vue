@@ -125,6 +125,7 @@ nav {
     #logo {
         min-width: 120px;
         max-width: 120px;
+        filter: opacity(70%);
     }
 
     .links {

@@ -102,9 +102,9 @@ section {
         // text-align: center;
         // border-radius: 50%;
 
-        @media screen and (max-width: 360px) {
-            display: none;
-        }
+        // @media screen and (max-width: 360px) {
+        //     display: none;
+        // }
     }
 }
 </style>
