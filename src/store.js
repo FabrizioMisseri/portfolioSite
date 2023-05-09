@@ -11,7 +11,6 @@ export const store = reactive({
                 "/assets/img/boolking/1.png",
             ],
             video: '/assets/video/boolking/',
-            description: 'lorem ipsum ...',
         },
         {
             title: 'FotoAlbum',
@@ -21,7 +20,6 @@ export const store = reactive({
                 "/assets/img/fotoalbum/3.png",
             ],
             video: '/assets/video/fotoalbum/',
-            description: 'lorem ipsum ...',
         },
     ],
 

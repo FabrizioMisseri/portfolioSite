@@ -52,7 +52,7 @@ export default {
 </script>
 
 <template>
-    <section class="py-5">
+    <section class="py-5 my-5 mx-auto">
         <!-- TITLE -->
         <h2 class="mb-3 text-center"> {{ project.title }} </h2>
         <!-- / TITLE -->
@@ -68,12 +68,6 @@ export default {
         </swiper>
         <!-- / SLIDER -->
 
-        <!-- TEXT -->
-        <h5>Descrizione progetto:</h5>
-        <p>
-            {{ project.description }}
-        </p>
-        <!-- / TEXT -->
     </section>
 </template>
 
@@ -82,7 +76,7 @@ export default {
 
 section {
     max-width: 90%;
-    margin: 0 auto;
+    border-bottom: 2px solid $bg-c;
 
     .swiper-pagination-bullet-active {
         background-color: $ironColor;
@@ -93,18 +87,6 @@ section {
         font-size: 1.5rem;
         color: $ironColor;
         font-weight: 600;
-
-        // background-color: $ironColor;
-        // display: inline-block;
-        // width: 50px;
-        // height: 25px;
-        // line-height: 25px;
-        // text-align: center;
-        // border-radius: 50%;
-
-        // @media screen and (max-width: 360px) {
-        //     display: none;
-        // }
     }
 }
 </style>
